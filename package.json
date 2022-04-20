@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify --inspect=0.0.0.0:9229 src/index.ts",
-    "dist": "rimraf dist && tsc -p tsconfig-production.json",
+    "dist": "tsc -p tsconfig-production.json",
     "start": "NODE_ENV=production node dist/index"
   },
   "repository": {
