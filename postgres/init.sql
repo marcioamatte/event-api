@@ -116,3 +116,8 @@ INSERT INTO public.authenticator (user_email, user_password) VALUES('bauer@ctu.u
 INSERT INTO public.events (id, event_description, event_start, event_end, user_id)VALUES('11f2050b-53ed-4bfe-a33e-db8e2421772d', 'Event Test','2022-05-01 10:00:00','2022-05-01 12:00:00','4f4ff96f-c156-4798-a19d-4f100edaa681');
 INSERT INTO public.subscriber (subscriber_email, subscriber_name, event_id)VALUES('john.doe@mail.net', 'John Doe', '11f2050b-53ed-4bfe-a33e-db8e2421772d');
 INSERT INTO public.subscriber (subscriber_email, subscriber_name, event_id)VALUES('john.wick@wick.net', 'John Wick', '11f2050b-53ed-4bfe-a33e-db8e2421772d');
+
+SELECT * FROM users u;
+SELECT * FROM authenticator a;
+SELECT * FROM events e;
+SELECT * FROM subscriber s;
