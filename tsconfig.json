@@ -10,7 +10,7 @@
     "module": "commonjs",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
+    "strict": false,
     "skipLibCheck": true,
     "moduleResolution": "node",
     "noImplicitOverride": true,
