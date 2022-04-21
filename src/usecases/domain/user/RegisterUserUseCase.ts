@@ -22,6 +22,7 @@ export class RegisterUserUseCase {
   }
 
   async registerUser ({ name, email, password }: UserDTO): Promise<UserRegistered> {
+    if (!name || !email || !password) return left(new Error('Nome, E-mail ou Senha são obrigatórios'))
     let user = await this.userRepository.loadByEmail(email)
     if (user) return left(new Error('Usuário já registrado'))
     user = await this.userRepository.create(new User('', name, email))
