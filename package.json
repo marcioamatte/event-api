@@ -4,7 +4,9 @@
   "description": "Events API for tests",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --passWithNoTests --no-cache --runInBand",
+    "test:coverage": "npm t -- --coverage",
+    "test:coveralls": "npm run test:coverage && coveralls < coverage/lcov.info",
     "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify --inspect=0.0.0.0:9229 src/index.ts",
     "dist": "tsc -p tsconfig-production.json",
     "start": "NODE_ENV=production node dist/index"
@@ -31,6 +33,7 @@
     "@types/uuid": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
     "@typescript-eslint/parser": "^5.20.0",
+    "coveralls": "^3.1.1",
     "eslint": "^8.13.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
