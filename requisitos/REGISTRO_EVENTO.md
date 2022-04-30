@@ -2,13 +2,14 @@
 ---
 ## Condições para um registro de Evento ocorrer
 
-1 - Usuário proprietário precisa existir (Não pode ser permitido um registro com usuário inexistente)
+>1 - O evento deve ter todas a informações preenchidas (Descrição, Data de Início, Data de Fim e Usuário proprietário)
 
-2 - O Evento de possuir obrigatoriamente: (Descrição, Data de Início, Data de Fim e Usuário proprietário)
+>2 - A data de fim deve ser MAIOR que a data de INÍCIO
 
-3 - Um usuário nunca pode ter MAIS de UM evento ATIVO ao mesmo tempo.
+>3 - O usuário proprietário do evento, deve ser válido (existir no sistema)
 
-4 - Eventos INATIVOS e/ou EM ANDAMENTO não podem permitir Subscritores se registrarem
+>4 - Um usuário nunca pode ter MAIS de UM evento ATIVO ao mesmo tempo.
+
 
 ```Status dos Eventos: ATIVO -> Data de início deve ser maior que a data atual. INATIVO -> Data de fim menor que data atual. EM ANDAMENTO -> Data atual MAIOR que Data de início e Data Atual MENOR que Data de FIM. ```
 
