@@ -5,7 +5,7 @@ import { v4 } from 'uuid'
 export class InMemoryUser implements UserRepository {
   private users: Array<User> = []
 
-  async loadByEmail (email: string): Promise<Boolean | User> {
+  async loadByEmail (email: string): Promise<User> {
     return this.users.find(user => user.email === email)
   }
 

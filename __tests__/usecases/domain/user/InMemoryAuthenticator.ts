@@ -1,6 +1,5 @@
 import { Authenticator } from '@/entities/domain/models/Authenticator'
 import { AuthenticatorRepository } from '@/entities/domain/repositories/AuthenticatorRepository'
-import { Left, Right } from '@/project/logic/Either'
 import { v4 } from 'uuid'
 
 export class InMemoryAuthenticator implements AuthenticatorRepository {
@@ -12,7 +11,13 @@ export class InMemoryAuthenticator implements AuthenticatorRepository {
     return true
   }
 
-  authenticate (authenticator: Authenticator): Promise<Left<Error, Authenticator> | Right<Error, Authenticator>> {
-    throw new Error('Method not implemented.')
+  async authenticate (authenticator: Authenticator): Promise<Authenticator | Error> {
+    const foundAuthenticator = this.authenticators.find(auth => auth.email === authenticator.email)
+    if (foundAuthenticator) {
+      if (foundAuthenticator.password === authenticator.password) {
+        return foundAuthenticator
+      }
+    }
+    return new Error('Authenticação inválida')
   }
 }
