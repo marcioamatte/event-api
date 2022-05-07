@@ -1,0 +1,6 @@
+projectKey=event-api
+serverUrl=http://localhost:9000
+serverVersion=9.4.0.54424
+dashboardUrl=http://localhost:9000/dashboard?id=event-api
+ceTaskId=AYCfLSoXMNj9Q_XIPaGt
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYCfLSoXMNj9Q_XIPaGt
